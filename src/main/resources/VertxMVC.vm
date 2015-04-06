@@ -1,0 +1,16 @@
+package ${packageName};
+
+import io.vertx.ext.apex.Router;
+import io.vertx.core.Vertx;
+
+public class ${className} {
+	public static void main(String... args) {
+		Vertx vertx = Vertx.vertx();
+		Router router = Router.router(vertx);
+		#foreach($route in $routes)
+		router.route("$route").handler(context-> {
+			context.response().end("this is just a test");
+		});
+		#end
+	}
+}

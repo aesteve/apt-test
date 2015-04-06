@@ -1,0 +1,15 @@
+plugins {
+	id	'java'
+	id	'eclipse'
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	maven { url 'http://oss.sonatype.org/content/repositories/snapshots/' }
+}
+
+dependencies {
+	compile 'io.vertx:vertx-apex:3.0.0-SNAPSHOT'
+	compile 'org.apache.velocity:velocity:1.7'
+}
